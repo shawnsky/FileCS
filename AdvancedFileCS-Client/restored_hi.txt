@@ -1,0 +1,68 @@
+ 
+Iterating map, vector - C++ STL
+C++ examples for STL:iterator
+
+HOMEC++STLiterator
+Description
+Iterating map, vector
+
+Demo Code
+
+ 
+#include <iostream> 
+ #include <string> 
+ #include <map> 
+ #include <vector> 
+
+using namespace std; 
+
+ int main() //w ww . j a  v  a2 s  .c  o m
+ { 
+    // Iterating through a map 
+    map<string, int> NumberWords; 
+
+    NumberWords["ten"] = 10; 
+    NumberWords["twenty"] = 20; 
+    NumberWords["thirty"] = 30; 
+
+    map<string, int>::iterator loopy = NumberWords.begin(); 
+
+    while (loopy != NumberWords.end()) 
+    { 
+        cout << loopy->first << " "; 
+        cout << loopy->second << endl; 
+        loopy++; 
+    } 
+
+    // Iterating through a vector 
+    vector<string> Words; 
+
+    Words.push_back("hello"); 
+    Words.push_back("there"); 
+    Words.push_back("ladies"); 
+    Words.push_back("and"); 
+    Words.push_back("aliens"); 
+
+    vector<string>::iterator vectorloop = Words.begin(); 
+
+    while (vectorloop != Words.end()) 
+    { 
+        cout << *vectorloop << endl; 
+        vectorloop++; 
+    } 
+
+    return 0; 
+ }
+Result
+
+
+ 
+
+PreviousNext
+Related Tutorials
+Printing a Range to a Stream
+Writing your own printing function
+Using istream_iterator and ostream_iterator to read from cin and write to cout.
+Obtaining Information Using a Random Access Iterator
+Using a random-access iterator.
+HOME | Copyright © www.java2s.com 2016SUCCESS
